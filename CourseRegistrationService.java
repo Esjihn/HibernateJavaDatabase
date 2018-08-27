@@ -10,7 +10,10 @@ import javax.persistence.TypedQuery;
 public class CourseRegistrationService {
     protected EntityManager em;
     
+<<<<<<< HEAD
     
+=======
+>>>>>>> ece85e41568eaa38eacb1c2ccc45d7611ad79a3f
     public CourseRegistrationService(EntityManager em) {
         this.em = em;
     }

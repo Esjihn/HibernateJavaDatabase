@@ -57,7 +57,10 @@ public class U07a1 extends Application {
     final Button submitButton = new Button("Submit");
     // Unit 7 adding Logger
     private static final Logger log = Logger.getLogger(U07a1.class.getName());
+<<<<<<< HEAD
  
+=======
+>>>>>>> ece85e41568eaa38eacb1c2ccc45d7611ad79a3f
     
     Course choice;
     final int MAX_CREDIT_LOAD = 9;
@@ -140,10 +143,15 @@ public class U07a1 extends Application {
         //  Add code to enroll learner in course & update 
         //  list of registered courses. 
         // ****************************************************
+<<<<<<< HEAD
+=======
+        // TODO add validation, exceptionhandling, logging
+>>>>>>> ece85e41568eaa38eacb1c2ccc45d7611ad79a3f
         coursesComboBox.setOnAction(e -> {
             if(totalCredit < MAX_CREDIT_LOAD)
             {
                 choice = coursesComboBox.getValue();
+<<<<<<< HEAD
                 if(Boolean.TRUE)
                 {
                    
@@ -189,6 +197,23 @@ public class U07a1 extends Application {
     submitButton.setOnAction((ActionEvent e) -> 
     {       
             coursesComboBox.getItems().add(choice);
+=======
+        
+                service.createCourseRegistration(learnerIDField.getText(),coursesComboBox.getValue().getCourseCode());
+  
+            }
+            
+            // TODO want to remove
+            for(CourseRegistration cr :service.getAllCourseRegistrations(learnerIDField.getText()))
+            {
+                System.out.println(cr.getLearnerID() + ": " + cr.getCourseCode());
+            }
+    });    
+    
+    submitButton.setOnAction((ActionEvent e) -> 
+    {     
+
+>>>>>>> ece85e41568eaa38eacb1c2ccc45d7611ad79a3f
         
             // Unit 7 marking comboBox and Label true after submit is pressed.
             coursesComboBox.setVisible(true);
@@ -201,7 +226,12 @@ public class U07a1 extends Application {
 
     public static void main(String[] args) 
     {
+<<<<<<< HEAD
         Logger.getLogger("org.hibernate").setLevel(Level.SEVERE);
+=======
+        log.setLevel(Level.INFO);
+        log.log(Level.SEVERE, "org.hibernate");
+>>>>>>> ece85e41568eaa38eacb1c2ccc45d7611ad79a3f
         launch(args);
     } 
     // Unit 7 TODO add stop and logging Info

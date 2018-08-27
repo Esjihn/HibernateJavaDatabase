@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> ece85e41568eaa38eacb1c2ccc45d7611ad79a3f
 package u07a1;
 
 import javax.persistence.Column;
@@ -52,4 +56,8 @@ public class Course {
         return this.courseCode;
     }
     
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ece85e41568eaa38eacb1c2ccc45d7611ad79a3f
